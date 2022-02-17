@@ -1,0 +1,25 @@
+{
+    "name": "Clueless",
+    "dockerFile": "Dockerfile",
+
+    "features": {
+        "git": "latest",
+        "docker-in-docker": {
+            "version": "latest",
+            "moby": true
+        },
+        "common": {
+            "username": "automatic",
+            "uid": "automatic",
+            "gid": "automatic",
+            "upgradePackages": true
+        }
+    },
+
+	"remoteUser": "node",
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"WallabyJs.quokka-vscode",
+		"rangav.vscode-thunder-client"
+	]
+}
