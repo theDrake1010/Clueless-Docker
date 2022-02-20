@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-// MongoDB URL from the docker-compose file
-const dbHost = 'mongodb://172.17.0.2:27017/mean-docker';
+// MongoDB URL from the process's environment variable.
+const dbHost = process.env.MONGO_URL;
 
 // Connect to mongodb
 mongoose.connect(dbHost);
