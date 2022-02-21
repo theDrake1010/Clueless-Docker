@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-// MongoDB URL from the process's environment variable.
-const dbHost = process.env.MONGO_URL;
+// MongoDB URL from the process's environment variables.	
+dbHost = `mongodb://${process.env.MONGO_SERVICE_SERVICE_HOST}:${process.env.MONGO_SERVICE_SERVICE_PORT}/${process.env.DB_NAME}`;
+
+// [TODO]: Remove this log line.
+console.log(dbHost);
 
 // Connect to mongodb
 mongoose.connect(dbHost);

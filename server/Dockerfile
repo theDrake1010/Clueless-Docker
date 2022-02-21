@@ -8,7 +8,8 @@ RUN npm install
 
 COPY ./ ./
 
-ENV MONGO_URL mongodb://172.17.0.2:27017/mean-docker
+ENV MONGO_SERVICE_HOST_PORT 27017
+ENV DB_NAME mean-docker
 
 EXPOSE 3000
 
